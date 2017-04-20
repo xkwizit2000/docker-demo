@@ -5,7 +5,8 @@ xkwizit2000/docker-demo:
   PkgInclude:
     - '*'
   PreInstall:
-    -
+    - sudo yum install -y docker
+    - sudo service docker start 
   Exec:
-    - docker run -p 8080:8080 
+    - sudo docker run -p 8080:8080 
 
