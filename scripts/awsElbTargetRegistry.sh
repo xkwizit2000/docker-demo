@@ -27,6 +27,6 @@ function getTargetState(){
 	echo $targetState
 }
 
-
+getTargetState
 #case $1 in 
 #	register) registerTarget 
