@@ -1,12 +1,12 @@
 xkwizit2000/docker-demo:
   Build:
-    - npm install
-    - npm test
+    - docker build -t 280770932422.dkr.ecr.us-east-1.amazonaws.com/docker-distelli-demo:$DISTELLI_BUILDNUM .
+    - docker push 280770932422.dkr.ecr.us-east-1.amazonaws.com/docker-distelli-demo:$DISTELLI_BUILDNUM
   PkgInclude:
     - '*'
   PreInstall:
     - sudo yum install -y docker
     - sudo service docker start 
   Exec:
-    - sudo docker run -p 8080:8080 
+    - sudo docker run -p 8080:8080  280770932422.dkr.ecr.us-east-1.amazonaws.com/docker-distelli-demo:$DISTELLI_BUILDNUM
 
