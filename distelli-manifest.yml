@@ -1,0 +1,14 @@
+xkwizit2000/docker-demo:
+  Build:
+    - npm install
+    - npm test
+  PkgInclude:
+    - '*'
+  PreInstall:
+    - sudo apt-get -y update
+    - sudo apt-get -y install nodejs
+  Env:
+    - PORT: "8080"
+  Exec:
+    - nodejs app.js
+
