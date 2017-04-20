@@ -22,10 +22,11 @@ function deregisterTarget(){
 	aws elbv2 deregister-targets ${cmdOptions}
 }
 
-function getTargetStage(){
+function getTargetState(){
 	targetState=$(aws elbv2 describe-target-health ${cmdOptions}|jq '.TargetHealthDescriptions[0].TargetHealth.State')
+	echo $targetState
 }
 
 
-getTargetStage
-echo $targetState
+#case $1 in 
+#	register) registerTarget 
