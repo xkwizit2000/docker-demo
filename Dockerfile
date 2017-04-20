@@ -1,5 +1,5 @@
-FROM node:boron
-
+#FROM node:boron
+FROM mhart/alpine-node:base-6
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
