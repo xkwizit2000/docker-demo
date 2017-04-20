@@ -1,8 +1,8 @@
 xkwizit2000/docker-demo:
   Build:
-    - $(aws ecr get-login --region us-east-1)
-    - docker build -t 280770932422.dkr.ecr.us-east-1.amazonaws.com/docker-distelli-demo:$DISTELLI_BUILDNUM .
-    - docker push 280770932422.dkr.ecr.us-east-1.amazonaws.com/docker-distelli-demo:$DISTELLI_BUILDNUM
+    - sudo $(aws ecr get-login --region us-east-1)
+    - sudo ocker build -t 280770932422.dkr.ecr.us-east-1.amazonaws.com/docker-distelli-demo:$DISTELLI_BUILDNUM .
+    - sudo docker push 280770932422.dkr.ecr.us-east-1.amazonaws.com/docker-distelli-demo:$DISTELLI_BUILDNUM
   PkgInclude:
     - '*'
   PreInstall:
